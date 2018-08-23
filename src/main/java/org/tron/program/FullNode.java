@@ -44,9 +44,6 @@ public class FullNode {
       appT.addService(new WitnessService(appT, context));
     }
     //http
-
-
-
     FullNodeHttpApiService httpApiService = context.getBean(FullNodeHttpApiService.class);
     appT.addService(httpApiService);
 
@@ -54,7 +51,6 @@ public class FullNode {
     appT.startServices();
     appT.startup();
 
-    System.out.println("h______________________");
     rpcApiService.blockUntilShutdown();
   }
 
